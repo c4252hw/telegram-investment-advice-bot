@@ -103,7 +103,7 @@ def main():
     # 資料時間範圍設定
     start_date = (dt.datetime.now() - dt.timedelta(days=180)).strftime("%Y-%m-%d")
     end_date = dt.datetime.now().strftime("%Y-%m-%d")
-    symbol = '^TWII'
+    symbol = 'GC=F'
     df = yf.download(symbol, start=start_date, end=end_date)
     # 取得交易訊號
     signal = process(df,min_max_scaler,model)
